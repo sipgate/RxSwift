@@ -100,7 +100,6 @@ custom_categories:
   - UITextView+Rx
   - UIView+Rx
   - UIViewController+Rx
-  - UIWebView+Rx
 - name: RxCocoa/iOS/Protocols
   children:
   - RxCollectionViewDataSourceType
