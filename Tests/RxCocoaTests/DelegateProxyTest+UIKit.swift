@@ -467,23 +467,6 @@ final class ExtendWebViewDelegateProxy
     }
 }
 
-final class UIWebViewSubclass: UIWebView, TestDelegateControl {
-    func doThatTest(_ value: Int) {
-        (delegate as! TestDelegateProtocol).testEventHappened?(value)
-    }
-
-    var delegateProxy: DelegateProxy<UIWebView, UIWebViewDelegate> {
-        return self.rx.delegate
-    }
-
-    func setMineForwardDelegate(_ testDelegate: UIWebViewDelegate) -> Disposable {
-        return RxWebViewDelegateProxy.installForwardDelegate(testDelegate,
-                                                             retainDelegate: false,
-                                                             onProxyForObject: self)
-    }
-    
-}
-
 #endif
 
 
